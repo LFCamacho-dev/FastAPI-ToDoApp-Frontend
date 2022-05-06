@@ -1,4 +1,6 @@
 import sys
+sys.path.append("..")
+
 from fastapi import Depends, HTTPException, status, APIRouter, Request
 from pydantic import BaseModel
 from typing import Optional
@@ -12,7 +14,6 @@ from jose import jwt, JWTError
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 
-sys.path.append("..")
 
 templates = Jinja2Templates(directory="templates")
 
